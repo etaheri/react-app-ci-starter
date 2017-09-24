@@ -39,5 +39,14 @@ jobs:
       # run tests!
       - run: yarn test
       - run: yarn cypress
+      - store_artifacts:
+        path: cypress/videos
+      - store_artifacts:
+        path: cypress/screenshots
+
+general:
+  artifacts:
+    - "cypress/screenshots"
+    - "cypress/videos"
 
 
