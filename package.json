@@ -14,7 +14,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "cypress": "cypress run --record",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "TODO: implent linter"
   },
   "devDependencies": {
     "cypress": "^0.20.1"
