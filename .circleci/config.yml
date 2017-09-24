@@ -43,5 +43,22 @@ jobs:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
+      - run: yarn build
+
+    dependencies:
+      pre:
+        - pip install awsebcli
+
+    deployment:
+      development:
+        branch: develop
+        commands:
+          - yarn build
+          - eb deploy --profile react-ci-starter-dev
+      production:
+        branch: master
+        commands:
+          - yarn build
+          - eb deploy --profile default
 
 
