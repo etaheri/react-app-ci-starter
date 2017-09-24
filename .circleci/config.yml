@@ -31,18 +31,18 @@ jobs:
 
       - run: yarn install
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      # - save_cache:
+      #     paths:
+      #       - node_modules
+      #     key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
       - run: yarn test
       - run: yarn cypress
       - store_artifacts:
-        path: /cypress/videos
+        path: cypress/videos
       - store_artifacts:
-        path: /cypress/screenshots
+        path: cypress/screenshots
 
 
 
