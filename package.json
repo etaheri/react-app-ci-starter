@@ -13,6 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "cypress": "cypress run --record",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
