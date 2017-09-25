@@ -52,12 +52,12 @@ jobs:
     deployment:
       development:
         branch: develop
-        commands:
+        commands: |
           - yarn build
           - eb deploy --profile react-ci-starter-dev
       production:
         branch: master
-        commands:
+        commands: |
           - yarn build
           - eb deploy --profile default
 
