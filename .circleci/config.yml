@@ -53,8 +53,8 @@ jobs:
       development:
         branch: develop
         commands: |
-          - yarn build
-          - eb deploy --profile react-ci-starter-dev
+          yarn build
+          eb deploy --profile react-ci-starter-dev
       production:
         branch: master
         commands: |
