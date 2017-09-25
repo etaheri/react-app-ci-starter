@@ -10,6 +10,7 @@ jobs:
       # - image: circleci/node:7.10
       # using the image provided by cypress
       - image: cypress/internal:cy-0.19.4
+      - image: circleci/python:3.6.1
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -30,6 +31,7 @@ jobs:
             - v1-dependencies-
 
       - run: yarn install
+      - run: pip install awscli
 
       - save_cache:
           paths:
@@ -45,10 +47,10 @@ jobs:
           path: cypress/screenshots
       - run: yarn build
       - deploy:
-          name: Deploy to S3 if tests pass and branch is Master
+          name: Deploy to EB
           command: |
             if [ "${CIRCLE_BRANCH}" == "develop" ]; then
-              eb deploy --profile react-ci-starter-dev
+              aws eb deploy --profile react-ci-starter-dev
             else
               echo "Not deployment branch so not deploying"
             fi
