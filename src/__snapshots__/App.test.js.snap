@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component renders a snapshot 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="App-header"
+  >
+    <h2>
+      Welcome to React CI Starter
+       
+      <span
+        aria-label="wave"
+        className="hello"
+        role="img"
+      >
+        👋
+      </span>
+    </h2>
+  </div>
+</div>
+`;
