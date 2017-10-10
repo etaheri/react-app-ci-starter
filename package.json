@@ -15,14 +15,15 @@
     "start": "react-scripts start",
     "serve": "http-server ./build -p 8081",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --watchAll",
+    "test-local": "react-scripts test --env=jsdom --watchAll",
+    "test": "react-scripts test --env=jsdom",
     "cypress": "cypress run --record",
     "cypress-local": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint src/*.js",
     "analyze": "source-map-explorer build/static/js/main.*",
     "precommit": "lint-staged",
-    "prepush": "yarn test",
+    "prepush": "yarn test-local",
     "serve-test": "serve -s build -p 3000 & yarn run cypress"
   },
   "devDependencies": {
