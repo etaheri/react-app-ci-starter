@@ -15,7 +15,7 @@
     "start": "react-scripts start",
     "serve": "http-server ./build -p 8081",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --watchAll",
+    "test": "react-scripts test --env=jsdom",
     "cypress": "cypress run --record",
     "cypress-local": "cypress open",
     "eject": "react-scripts eject",
