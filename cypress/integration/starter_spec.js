@@ -1,5 +1,9 @@
-describe("My First Test", function() {
-  it("Does not do much!", function() {
-    expect(true).to.equal(true);
+describe('App E2E', () => {
+  beforeEach(() => {
+    cy.visit('/');
+  });
+
+  it('App Renders Correctly', () => {
+    cy.screenshot();
   });
 });

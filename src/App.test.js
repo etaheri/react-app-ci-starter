@@ -11,7 +11,7 @@ describe('App Component', () => {
     ReactDOM.render(<App />, div);
   });
 
-  it('it renders a title', () => {
+  it('renders a title', () => {
     const renderedComponent = shallow(<App />);
     expect(renderedComponent.find('h2').length).toBe(1);
   });

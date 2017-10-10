@@ -5,13 +5,11 @@
   "dependencies": {
     "http-server": "^0.10.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "serve": "^6.2.0"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "src/**/*.{js,jsx,json,css}": ["prettier --single-quote --write", "git add"]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -19,14 +17,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --watchAll",
     "cypress": "cypress run --record",
+    "cypress-local": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint src/*.js",
     "analyze": "source-map-explorer build/static/js/main.*",
     "precommit": "lint-staged",
-    "prepush": "yarn test"
+    "prepush": "yarn test",
+    "serve-test": "serve -s build -p 3000 & yarn run cypress"
   },
   "devDependencies": {
-    "cypress": "^0.20.1",
+    "cypress": "^1.0.1",
     "enzyme": "^2.9.1",
     "eslint": "^4.7.2",
     "eslint-config-airbnb": "^15.1.0",

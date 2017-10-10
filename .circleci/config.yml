@@ -38,11 +38,11 @@ jobs:
 
       # run tests!
       - run: yarn test
-      - run: yarn cypress
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
       - run: yarn build
+      - run: yarn serve-test
       # - deploy:
       #     Include deploy process here
